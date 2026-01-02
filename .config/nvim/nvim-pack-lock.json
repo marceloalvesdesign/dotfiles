@@ -7,6 +7,10 @@
     "conform.nvim": {
       "rev": "8314f4c9e205e7f30b62147069729f9a1227d8bf",
       "src": "https://github.com/stevearc/conform.nvim"
+    },
+    "vim-slime": {
+      "rev": "2792879461d3f562a3a353f83ed0dc5dc3f5bb82",
+      "src": "https://github.com/jpalardy/vim-slime"
     }
   }
 }

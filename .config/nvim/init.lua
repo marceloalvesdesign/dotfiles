@@ -29,6 +29,10 @@ vim.pack.add({
     src = "https://github.com/stevearc/conform.nvim",
     name = "conform",
   },
+  {
+    src = "https://github.com/jpalardy/vim-slime",
+    name = "vim-slime",
+  },
 })
 
 require("conform").setup({
@@ -44,5 +48,9 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     require("conform").format({ bufnr = args.buf })
   end,
 })
+
+vim.g.slime_bracketed_paste = 1
+vim.g.slime_default_config = { socket_name = "default", target_pane = "{last}" }
+vim.g.slime_target = "tmux"
 
 vim.lsp.enable({ "tsgo" })

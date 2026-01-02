@@ -4,4 +4,5 @@ brew "ripgrep"
 brew "starship"
 brew "stylua"
 brew "stow"
+brew "tmux"
 
