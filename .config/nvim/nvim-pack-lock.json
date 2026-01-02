@@ -1,0 +1,12 @@
+{
+  "plugins": {
+    "conform": {
+      "rev": "8314f4c9e205e7f30b62147069729f9a1227d8bf",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
+    "conform.nvim": {
+      "rev": "8314f4c9e205e7f30b62147069729f9a1227d8bf",
+      "src": "https://github.com/stevearc/conform.nvim"
+    }
+  }
+}
