@@ -22,7 +22,39 @@ vim.o.timeoutlen = 300
 vim.o.undofile = true
 vim.o.updatetime = 250
 
+vim.opt.rtp:append("/opt/homebrew/bin/fzf")
+
+vim.keymap.set("n", "<leader>fzf", "<cmd>:FZF<CR>")
+
+if vim.fn.executable("rg") == 1 then
+  vim.opt.grepprg = "rg --vimgrep --no-require-git --no-hidden --no-heading"
+  vim.opt.grepformat = "%f:%l:%c:%m"
+end
+
+vim.cmd("set completeopt+=noselect")
+
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(ev)
+    local client = vim.lsp.get_client_by_id(ev.data.client_id)
+    if client:supports_method("textDocument/completion") then
+      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+    end
+  end,
+})
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+  desc = "Highlight when yanking (copying) text",
+  group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+  callback = function()
+    vim.hl.on_yank()
+  end,
+})
+
+vim.diagnostic.config({
+  virtual_text = { current_line = true },
+})
 
 vim.pack.add({
   {
