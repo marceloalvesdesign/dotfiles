@@ -1,5 +1,8 @@
 brew "fzf"
 brew "gh"
+brew "jq"
+brew "lynx"
+brew "pandoc"
 brew "ripgrep"
 brew "starship"
 brew "stylua"
