@@ -22,7 +22,7 @@ vim.o.timeoutlen = 300
 vim.o.undofile = true
 vim.o.updatetime = 250
 
-vim.opt.rtp:append("/opt/homebrew/bin/fzf")
+vim.opt.rtp:append("/opt/homebrew/opt/fzf")
 
 vim.keymap.set("n", "<leader>fzf", "<cmd>:FZF<CR>")
 
