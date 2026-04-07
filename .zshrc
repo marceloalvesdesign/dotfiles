@@ -13,3 +13,5 @@ export PATH="$PATH:$HOME/.local/bin"
 export VISUAL="vi"
 
 eval "$(starship init zsh)"
+eval "$(mise activate zsh)"
+
