@@ -8,6 +8,10 @@
       "rev": "8314f4c9e205e7f30b62147069729f9a1227d8bf",
       "src": "https://github.com/stevearc/conform.nvim"
     },
+    "nvim-treesitter": {
+      "rev": "b033ab331ca0bccbd93c3c2b4f886fdfc09abec0",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
+    },
     "vim-slime": {
       "rev": "2792879461d3f562a3a353f83ed0dc5dc3f5bb82",
       "src": "https://github.com/jpalardy/vim-slime"
