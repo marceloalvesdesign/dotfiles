@@ -1,3 +1,4 @@
+brew "clojure/tools/clojure"
 brew "fzf"
 brew "gh"
 brew "jq"
